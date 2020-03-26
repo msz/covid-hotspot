@@ -1,3 +1,14 @@
 /* This file is for your main application css. */
 
 @import "./phoenix.css";
+
+.phx-hero {
+    background: transparent;
+    border-bottom: 0px
+}
+
+.top-hotspot {
+    font-size: 200%;
+    font-weight: bold;
+    padding: 3rem;
+}
