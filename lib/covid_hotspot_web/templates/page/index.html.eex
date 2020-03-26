@@ -3,23 +3,31 @@
   <%# <h1>Welcome to Phoenix!</h1>
   <p>A productive web framework that<br/>does not compromise speed or maintainability.</p> %>
   <p class="top-hotspot">Italy</p>
-  <p>1 in 502934 currently infected</p>
+  <p>15 thousand active cases,</p>
+  <p>50 million population,</p>
+  <p>0.012% currently infected</p>
 </section>
 
 <section class="row">
 <table>
   <thead>
     <th>Region</th>
-    <th>Currently infected</th>
+    <th>Active cases</th>
+    <th>Population</th>
+    <th>Percentage</th>
   </thead>
   <tbody>
     <tr>
       <td>Italy</td>
-      <td>1 in 502934</td>
+      <td>10 thousand</td>
+      <td>50 million</td>
+      <td>0.012%</td>
     </tr>
     <tr>
       <td>UK</td>
-      <td>1 in 10000000</td>
+      <td>2 thousand</td>
+      <td>60 million</td>
+      <td>0.0003%</td>
     </tr>
   </tbody>
 </table>
