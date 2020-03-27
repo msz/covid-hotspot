@@ -26,21 +26,28 @@ defmodule CovidHotspot do
       } = area
 
       active_cases = total_confirmed - total_deaths - total_recovered
+      population = get_population(id)
+      fraction = Float.round(active_cases / population, 5)
 
       %{
         id: id,
         display_name: display_name,
         active_cases: active_cases,
-        population: get_population(id)
+        population: population,
+        fraction: fraction
       }
+    end)
+    |> Enum.reject(fn %{fraction: fraction} -> fraction == 0.0 end)
+    |> Enum.sort(fn %{fraction: fraction1}, %{fraction: fraction2} ->
+      fraction1 >= fraction2
     end)
   end
 
   defp get_population(covid_id) do
     population_id = covid_id_to_population_id(covid_id)
 
+    # TODO make this more efficient by making PopulationData a dictionary
     %{"population" => population} =
-      # TODO make this more efficient by making PopulationData a dictionary
       Enum.find(PopulationData.get_data(), fn %{"country_code" => country_code} ->
         country_code == population_id
       end)

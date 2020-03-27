@@ -1,11 +1,9 @@
 <section class="phx-hero">
   <p>the current top COVID-19 hotspot in the world is...<p>
-  <%# <h1>Welcome to Phoenix!</h1>
-  <p>A productive web framework that<br/>does not compromise speed or maintainability.</p> %>
-  <p class="top-hotspot">Italy</p>
-  <p>15 thousand active cases,</p>
-  <p>50 million population,</p>
-  <p>0.012% currently infected</p>
+  <p class="top-hotspot"><%= @top.display_name %></p>
+  <p><%= @top.active_cases %> active cases,</p>
+  <p><%= @top.population %> population,</p>
+  <p><%= percent(@top.fraction) %>% currently infected</p>
 </section>
 
 <section class="row">
@@ -17,18 +15,14 @@
     <th>Percentage</th>
   </thead>
   <tbody>
+  <%= for area <- @ranking do %>
     <tr>
-      <td>Italy</td>
-      <td>10 thousand</td>
-      <td>50 million</td>
-      <td>0.012%</td>
+      <td><%= area.display_name %></td>
+      <td><%= area.active_cases %></td>
+      <td><%= area.population %></td>
+      <td><%= percent(area.fraction) %>%</td>
     </tr>
-    <tr>
-      <td>UK</td>
-      <td>2 thousand</td>
-      <td>60 million</td>
-      <td>0.0003%</td>
-    </tr>
+  <% end %>
   </tbody>
 </table>
 </section>
