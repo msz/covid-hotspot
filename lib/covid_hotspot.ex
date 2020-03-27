@@ -40,6 +40,7 @@ defmodule CovidHotspot do
     population_id = covid_id_to_population_id(covid_id)
 
     %{"population" => population} =
+      # TODO make this more efficient by making PopulationData a dictionary
       Enum.find(PopulationData.get_data(), fn %{"country_code" => country_code} ->
         country_code == population_id
       end)
