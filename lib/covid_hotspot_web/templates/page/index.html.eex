@@ -10,17 +10,17 @@
 <table>
   <thead>
     <th>Region</th>
+    <th>Percentage</th>
     <th>Active cases</th>
     <th>Population</th>
-    <th>Percentage</th>
   </thead>
   <tbody>
   <%= for area <- @ranking do %>
     <tr>
       <td><%= area.display_name %></td>
+      <td><b><%= percent(area.fraction) %>%</b></td>
       <td><%= area.active_cases %></td>
       <td><%= million_fraction(area.population) %>M</td>
-      <td><b><%= percent(area.fraction) %>%</b></td>
     </tr>
   <% end %>
   </tbody>
