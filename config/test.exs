@@ -8,3 +8,5 @@ config :covid_hotspot, CovidHotspotWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :covid_hotspot, :covid_data_module, CovidHotspot.TestCovidData

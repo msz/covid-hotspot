@@ -1,9 +1,10 @@
 defmodule CovidHotspot do
   @moduledoc false
 
-  alias CovidHotspot.TestCovidData
   alias CovidHotspot.PopulationData
   alias CovidHotspot.Collate
+
+  @covid_data_module Application.fetch_env!(:covid_hotspot, :covid_data_module)
 
   def generate_covid_hotspot_data do
     get_covid_data()
@@ -68,6 +69,6 @@ defmodule CovidHotspot do
   end
 
   defp get_covid_data do
-    TestCovidData.get_data()
+    @covid_data_module.get_data()
   end
 end
