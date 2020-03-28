@@ -2,8 +2,8 @@
   <p>the current top COVID-19 hotspot in the world is...<p>
   <p class="top-hotspot"><%= @top.display_name %></p>
   <p><%= @top.active_cases %> active cases,</p>
-  <p><%= @top.population %> population,</p>
-  <p><%= percent(@top.fraction) %>% currently infected</p>
+  <p><%= million_fraction(@top.population) %> million population,</p>
+  <p><b><%= percent(@top.fraction) %>% currently infected</b></p>
 </section>
 
 <section class="row">
@@ -19,8 +19,8 @@
     <tr>
       <td><%= area.display_name %></td>
       <td><%= area.active_cases %></td>
-      <td><%= area.population %></td>
-      <td><%= percent(area.fraction) %>%</td>
+      <td><%= million_fraction(area.population) %>M</td>
+      <td><b><%= percent(area.fraction) %>%</b></td>
     </tr>
   <% end %>
   </tbody>
