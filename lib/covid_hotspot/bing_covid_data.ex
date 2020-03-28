@@ -1,5 +1,5 @@
 defmodule CovidHotspot.BingCovidData do
-  @cache_seconds 60
+  @cache_seconds 60 * 60
   def get_data() do
     with [{:bing_covid_data, {data, expiry}}] <- :ets.lookup(:cache, :bing_covid_data),
          true <- DateTime.diff(DateTime.utc_now(), expiry) < @cache_seconds do
