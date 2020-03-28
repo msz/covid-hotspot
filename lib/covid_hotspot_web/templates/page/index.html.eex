@@ -1,5 +1,5 @@
 <section class="phx-hero">
-  <p>the current top COVID-19 hotspot in the world is...<p>
+  <p>the current top COVID-19 hotspot in the world is...</p>
   <p class="top-hotspot"><%= @top.display_name %></p>
   <p><%= @top.active_cases %> active cases,</p>
   <p><%= million_fraction(@top.population) %> million population,</p>
