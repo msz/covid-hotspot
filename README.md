@@ -1,3 +1,5 @@
-# CovidHotspot
+# covid-hotspot
 
-Shows the COVID-19 infection rates of the world per region.
+Live world ranking of COVID-19 infection outbreak, adjusted by population.
+
+https://covidhotspot.info

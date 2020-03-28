@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title><%= assigns[:page_title] || "Top COVID-19 Hotspot" %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+
+    <!-- Primary Meta Tags -->
+    <title>Top COVID-19 Hotspot</title>
+    <meta name="title" content="Top COVID-19 Hotspot">
+    <meta name="description" content="Live world ranking of COVID-19 infection outbreak, adjusted by population. ">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://covidhotspot.info/">
+    <meta property="og:title" content="Top COVID-19 Hotspot">
+    <meta property="og:description" content="Live world ranking of COVID-19 infection outbreak, adjusted by population. ">
+    <meta property="og:image" content="<%= Routes.static_path(@conn, "/images/banner.jpg") %>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://covidhotspot.info/">
+    <meta property="twitter:title" content="Top COVID-19 Hotspot">
+    <meta property="twitter:description" content="Live world ranking of COVID-19 infection outbreak, adjusted by population. ">
+    <meta property="twitter:image" content="<%= Routes.static_path(@conn, "/images/banner.jpg") %>">
     <%= csrf_meta_tag() %>
   </head>
   <body>
