@@ -12,3 +12,7 @@
     font-weight: bold;
     padding: 3rem;
 }
+
+.container {
+    max-width: 60rem;
+}
