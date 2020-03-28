@@ -18,6 +18,8 @@ config :covid_hotspot, CovidHotspotWeb.Endpoint,
   ],
   secret_key_base: secret_key_base
 
+config :covid_hotspot, :google_analytics_tag, System.get_env("GOOGLE_ANALYTICS_TAG")
+
 # ## Using releases (Elixir v1.9+)
 #
 # If you are doing OTP releases, you need to instruct Phoenix

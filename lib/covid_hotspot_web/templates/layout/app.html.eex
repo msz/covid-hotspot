@@ -26,6 +26,19 @@
     <meta property="twitter:description" content="Live world ranking of COVID-19 infection outbreak, adjusted by population. ">
     <meta property="twitter:image" content="<%= Routes.static_path(@conn, "/images/banner.jpg") %>">
     <%= csrf_meta_tag() %>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= Application.fetch_env!(:covid_hotspot, :google_analytics_tag) %>"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '<%= Application.fetch_env!(:covid_hotspot, :google_analytics_tag) %>');
+    </script>
+
   </head>
   <body>
     <main role="main" class="container">
