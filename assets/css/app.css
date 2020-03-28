@@ -24,3 +24,10 @@
 table {
     font-size: 80%;
 }
+
+td, th {
+    text-align: center;
+    width: 15rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
