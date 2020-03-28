@@ -8,11 +8,19 @@
 }
 
 .top-hotspot {
-    font-size: 200%;
+    font-size: 160%;
     font-weight: bold;
     padding: 3rem;
 }
 
 .container {
     max-width: 60rem;
+}
+
+.phx-hero {
+    padding: 3rem;
+}
+
+.table {
+    font-size: 70%;
 }
