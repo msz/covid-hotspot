@@ -6,6 +6,9 @@ defmodule CovidHotspot.Application do
   use Application
 
   def start(_type, _args) do
+    # create cache in ETS
+    :ets.new(:cache, [:set, :public, :named_table])
+
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
