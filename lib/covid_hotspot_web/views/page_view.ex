@@ -2,7 +2,7 @@ defmodule CovidHotspotWeb.PageView do
   use CovidHotspotWeb, :view
 
   def million_fraction(number) do
-    fraction = (number / 1_000_000)
+    fraction = number / 1_000_000
     Float.round(fraction, 2)
   end
 
