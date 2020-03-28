@@ -33,7 +33,12 @@ defmodule CovidHotspot do
           fraction: fraction
         }
     end)
+    # reject minuscule infections
     |> Enum.reject(fn %{fraction: fraction} -> fraction == 0.0 end)
+    # reject small population regions (<500k)
+    |> Enum.reject(fn %{population: population} -> population < 500_000 end)
+    # reject city sized regions
+    |> Enum.reject(fn %{id: id} -> id in ["luxembourg"] end)
     |> Enum.sort(fn %{fraction: fraction1}, %{fraction: fraction2} ->
       fraction1 >= fraction2
     end)
