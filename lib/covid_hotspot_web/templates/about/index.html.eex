@@ -1,5 +1,16 @@
 <section>
     <p>
-        This will be the About page.
+        Created by <a href="https://github.com/msz">Michał Szewczak</a>.
     <p>
+    <p>
+        COVID-19 data is taken every hour from the <a href="https://bing.com/covid">Bing dashboard</a>.
+        Population data is 2018 data from <a href="https://data.worldbank.org/indicator/sp.pop.totl">The World Bank</a>.
+        Small population regions (<500K) and city sized regions (Luxembourg) are filtered out for better consistency.
+    </p>
+    <p>
+        <em>covidhotspot.info</em> is fully open source under the MIT
+        license. Check the source on <a href="https://github.com/msz/covid-hotspot">GitHub</a>.
+        For feedback or suggestions, submit <a href="https://github.com/msz/covid-hotspot/issues/new">an issue</a>
+        or <a href="mailto:michal@szewczak.email?subject=covidhotspot.info Feedback">email me</a> directly.
+    </p>
 </section>
