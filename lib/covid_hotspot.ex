@@ -57,7 +57,6 @@ defmodule CovidHotspot do
   defp normalize_covid_area(%{} = area), do: area
 
   defp get_population(covid_id) do
-    IO.inspect(covid_id)
     population_id = Collate.covid_id_to_population_id(covid_id)
     # TODO make this more efficient by making PopulationData a dictionary
     %{"population" => population} =
