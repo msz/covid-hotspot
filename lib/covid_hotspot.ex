@@ -34,8 +34,6 @@ defmodule CovidHotspot do
           fraction: fraction
         }
     end)
-    # reject minuscule infections
-    |> Enum.reject(fn %{fraction: fraction} -> fraction == 0.0 end)
     # reject small population regions (<500k)
     |> Enum.reject(fn %{population: population} -> population < 500_000 end)
     # reject city sized regions

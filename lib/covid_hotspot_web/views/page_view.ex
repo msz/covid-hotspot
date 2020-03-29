@@ -7,6 +7,9 @@ defmodule CovidHotspotWeb.PageView do
   end
 
   def percent(fraction) do
-    Float.round(fraction * 100, 5)
+    case Float.round(fraction * 100, 5) do
+      0.0 -> "~0.0"
+      other -> other
+    end
   end
 end
